@@ -14,6 +14,16 @@
         .success {
             color: green;
         }
+
+        #output {
+            display: none;
+        }
+
+        textarea {
+            width:400px;
+            height:500px;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -26,5 +36,9 @@
         <div id="test_result_status">Load a file...</div>
         <div id="test_result_text"></div>
     </div>
+<div id="output">
+    <textarea id="json"></textarea>
+    <textarea id="binary">test</textarea>
+</div>
 </body>
 </html>

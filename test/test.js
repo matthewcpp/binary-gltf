@@ -22,8 +22,18 @@ async function testFile() {
 
         const arrayBuffer = await response.arrayBuffer();
 
-        const binaryGltf = new BinaryGltf(arrayBuffer);
+        const binaryGltf = BinaryGltf.load(arrayBuffer);
         testResult("SUCCESS", "");
+
+        const output = document.getElementById("output");
+        output.style.display = "inline-block";
+
+        const textarea = document.getElementById("json");
+        textarea.value = JSON.stringify(binaryGltf.json, null, 2);
+
+        const binary = document.getElementById("binary");
+        binary.value = `offset: ${binaryGltf.binary.byteOffset}\nlength:${binaryGltf.binary.byteLength}`;
+
     } catch (e) {
         testResult("FAILURE", e.toString());
     }
