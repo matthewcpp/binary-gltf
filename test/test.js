@@ -22,7 +22,7 @@ async function testFile() {
 
         const arrayBuffer = await response.arrayBuffer();
 
-        const binaryGltf = BinaryGltf.load(arrayBuffer);
+        const binaryGltf = BinaryGltf.parse(arrayBuffer);
         testResult("SUCCESS", "");
 
         const output = document.getElementById("output");
