@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binary glTF Parsing Test</title>
+
+    <script src="test.js" type="module"></script>
+
+    <style>
+        .failure {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="url">Test File:</label>
+        <input type="text" id="url" value="models/TextureCoordinateTest.glb" />
+        <button id="load_button">Load</button>
+    </div>
+    <div id="test_result">
+        <div id="test_result_status">Load a file...</div>
+        <div id="test_result_text"></div>
+    </div>
+</body>
+</html>
