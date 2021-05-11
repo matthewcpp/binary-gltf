@@ -1,24 +1,23 @@
 {
-  "name": "@matthewcpp/parse-glb",
+  "name": "@matthewcpp/binary-gltf",
   "version": "0.1.0",
-  "description": "\"Simple tool to parse chunks of a binary gltf file\"",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "\"Simple tool to parse chunks from a binary gltf file\"",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/matthewcpp/parse-binary-gltf.git"
   },
   "keywords": [
-    "gltf"
+    "gltf",
+    "glb"
   ],
   "author": "Matthew LaRocca",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matthewcpp/parse-binary-gltf/issues"
+    "url": "https://github.com/matthewcpp/binary-gltf/issues"
   },
-  "homepage": "https://github.com/matthewcpp/parse-binary-gltf#readme",
+  "homepage": "https://github.com/matthewcpp/binary-gltf#readme",
   "devDependencies": {
     "http-server": "^0.12.3"
   }
