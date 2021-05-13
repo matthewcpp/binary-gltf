@@ -12,6 +12,9 @@
     "gltf",
     "glb"
   ],
+  "scripts": {
+    "build": "npx tsc --project src/tsconfig.json"
+  },
   "author": "Matthew LaRocca",
   "license": "MIT",
   "bugs": {
@@ -19,6 +22,7 @@
   },
   "homepage": "https://github.com/matthewcpp/binary-gltf#readme",
   "devDependencies": {
-    "http-server": "^0.12.3"
+    "http-server": "^0.12.3",
+    "typescript": "^4.2.4"
   }
 }

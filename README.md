@@ -1,5 +1,5 @@
 # binary-gltf
-Simply library for working with binary glTF files.
+Simpe library for working with binary glTF files.
 
 The library exposes a single `parse` method that takes an `ArrayBuffer` of a GLB file and returns an object with the following structure:
 ```
@@ -33,6 +33,7 @@ try {
 ```
 
 ### Testing
-1. Start the development server: `npx htt-server`
+1. Build the library by running `npm run build`
+1. Start the development server: `npx http-server`
 1. Navigate to [http://localhost:8080/test/](http://localhost:8080/test/)
 1. Enter GLB file url and click Load.
