@@ -15,7 +15,8 @@
   ],
   "scripts": {
     "build": "npx rollup --config src/rollup.config.js",
-    "test-web": "npx http-server -o /tests/browser"
+    "test-web": "npx http-server -o /tests/browser",
+    "test-node": "node tests/node/test.js tests/models/TextureCoordinateTest.glb"
   },
   "author": "Matthew LaRocca",
   "license": "MIT",

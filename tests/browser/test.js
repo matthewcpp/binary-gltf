@@ -1,4 +1,4 @@
-import {BinaryGltf} from "/dist/index.js";
+import { BinaryGltf } from "/dist/index.js";
 
 function testResult(status, text) {
     const testResultStatus = document.getElementById("test_result_status");
