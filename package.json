@@ -2,6 +2,7 @@
   "name": "@matthewcpp/binary-gltf",
   "version": "0.1.0",
   "description": "\"Simple tool to parse chunks from a binary gltf file\"",
+  "main": "dist/index_cjs.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -13,7 +14,8 @@
     "glb"
   ],
   "scripts": {
-    "build": "npx tsc --project src/tsconfig.json"
+    "build": "npx rollup --config src/rollup.config.js",
+    "test-web": "npx http-server -o /tests/browser"
   },
   "author": "Matthew LaRocca",
   "license": "MIT",
@@ -23,6 +25,8 @@
   "homepage": "https://github.com/matthewcpp/binary-gltf#readme",
   "devDependencies": {
     "http-server": "^0.12.3",
+    "rollup": "^2.68.0",
+    "rollup-plugin-typescript2": "^0.31.2",
     "typescript": "^4.2.4"
   }
 }
