@@ -1,4 +1,4 @@
-import {BinaryGltf} from "/dist/index.js";
+import { BinaryGltf } from "/dist/index.js";
 
 function testResult(status, text) {
     const testResultStatus = document.getElementById("test_result_status");
@@ -9,7 +9,7 @@ function testResult(status, text) {
     testResultText.innerHTML = text;
 }
 
-async function testFile() {
+export default async function testFile() {
     const url = document.getElementById("url").value;
 
     console.log(url);
@@ -17,8 +17,10 @@ async function testFile() {
     try {
         const response = await fetch(url);
 
-        if (!response.ok)
+        if (!response.ok){
             testResult("FAILURE", `Error fetching model: ${response.status}`);
+            return;
+        }
 
         const arrayBuffer = await response.arrayBuffer();
 
@@ -39,5 +41,3 @@ async function testFile() {
     }
 }
 
-const loadButton = document.getElementById("load_button");
-loadButton.onclick = testFile;

@@ -19,21 +19,35 @@ If any error is encountered during parsing, an exception will be thrown.
 
 ### Usage
 
-To use with rollup:
+Example use in browser (rollup):
 
 ```javascript
 import {BinaryGltf} from "@matthewcpp/binary-gltf";
 
 try {
-    const binaryGltf = BinaryGltf.parse(arrayBuffer);
+    const response = await fetch(url);
+    const buffer = await response.arrayBuffer();
+    const binaryGltf = BinaryGltf.parse(buffer);
 } catch (e) {
     console.log(e.toString());
 }
+```
 
+Example use in NodeJS:
+
+```javascript
+const { BinaryGltf } = require("@matthewcpp/binary-gltf");
+const fs = require("fs");
+
+try {
+    const data = fs.readFileSync(filePath);
+    const binaryGltf = BinaryGltf.parse(data.buffer);
+} catch (e) {
+    console.log(e.toString());
+}
 ```
 
 ### Testing
 1. Build the library by running `npm run build`
-1. Start the development server: `npx http-server`
-1. Navigate to [http://localhost:8080/test/](http://localhost:8080/test/)
-1. Enter GLB file url and click Load.
+1. Test Browser usage: `npm run test-web`
+1. Test NodeJs usage: `npm run test-node`

@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <title>Binary glTF Parsing Test</title>
 
-    <script src="test.js" type="module"></script>
+    <script type="module">
+        import testFile from "./test.js"
+
+        window.onload = () => {
+            const loadButton = document.getElementById("load_button");
+            loadButton.onclick = testFile;
+        };
+        
+    </script>
 
     <style>
         .failure {
@@ -29,7 +37,7 @@
 <body>
     <div>
         <label for="url">Test File:</label>
-        <input type="text" id="url" value="models/TextureCoordinateTest.glb" />
+        <input type="text" id="url" value="/tests/models/TextureCoordinateTest.glb" />
         <button id="load_button">Load</button>
     </div>
     <div id="test_result">
