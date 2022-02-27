@@ -34,6 +34,4 @@ try {
 
 ### Testing
 1. Build the library by running `npm run build`
-1. Start the development server: `npx http-server`
-1. Navigate to [http://localhost:8080/test/](http://localhost:8080/test/)
-1. Enter GLB file url and click Load.
+1. Test Browser usage: `npm run test-web`
